@@ -61,6 +61,7 @@ docs/_build/
 
 # IDEs and editors
 .idea/*  # PyCharm / IntelliJ IDEA
+.idea/
 *.iml
 *.ipr
 *.iws
