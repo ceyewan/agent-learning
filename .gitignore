@@ -70,7 +70,7 @@ docs/_build/
 .DS_Store # macOS
 Thumbs.db # Windows
 ehthumbs.db # Windows
-*.log
+# *.log
 *.sqlite3 # SQLite database files (often used for dev)
 *.csv # Generated CSVs
 *.json # Generated JSONs

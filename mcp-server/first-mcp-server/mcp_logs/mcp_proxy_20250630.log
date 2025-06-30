@@ -1,0 +1,326 @@
+2025-06-30 17:07:20,046 - INFO - CONNECTION: {
+  "timestamp": "2025-06-30T17:07:20.046588",
+  "session_id": "ef15794d",
+  "type": "CONNECTION_STATUS",
+  "status": "ESTABLISHED",
+  "details": "Client: 127.0.0.1 -> Proxy: 8000"
+}
+2025-06-30 17:07:20,046 - INFO - REQUEST: {
+  "timestamp": "2025-06-30T17:07:20.046751",
+  "session_id": "ef15794d",
+  "direction": "CLIENT_TO_PROXY",
+  "type": "REQUEST",
+  "method": "GET",
+  "url": "http://127.0.0.1:8000/sse/",
+  "headers": {
+    "Host": "127.0.0.1:8000",
+    "Accept-Encoding": "gzip, deflate, zstd",
+    "Connection": "keep-alive",
+    "User-Agent": "python-httpx/0.28.1",
+    "Accept": "text/event-stream",
+    "Cache-Control": "no-store"
+  },
+  "body": null
+}
+2025-06-30 17:07:20,046 - INFO - CONNECTION: {
+  "timestamp": "2025-06-30T17:07:20.046802",
+  "session_id": "ef15794d",
+  "type": "CONNECTION_STATUS",
+  "status": "SSE_STARTED",
+  "details": "http://localhost:8080/sse/"
+}
+2025-06-30 17:07:20,049 - INFO - RESPONSE: {
+  "timestamp": "2025-06-30T17:07:20.049290",
+  "session_id": "ef15794d",
+  "direction": "SERVER_TO_PROXY",
+  "type": "RESPONSE",
+  "status": 200,
+  "headers": {
+    "Date": "Mon, 30 Jun 2025 09:07:20 GMT",
+    "Server": "uvicorn",
+    "Cache-Control": "no-store",
+    "Connection": "keep-alive",
+    "x-accel-buffering": "no",
+    "Content-Type": "text/event-stream; charset=utf-8",
+    "Transfer-Encoding": "chunked"
+  },
+  "body": "[SSE Stream Started]"
+}
+2025-06-30 17:07:20,049 - INFO - SSE_EVENT: {
+  "timestamp": "2025-06-30T17:07:20.049395",
+  "session_id": "ef15794d",
+  "direction": "SERVER_TO_CLIENT",
+  "type": "SSE_EVENT",
+  "event_type": "event",
+  "data": "endpoint"
+}
+2025-06-30 17:07:20,049 - INFO - SSE_EVENT: {
+  "timestamp": "2025-06-30T17:07:20.049454",
+  "session_id": "ef15794d",
+  "direction": "SERVER_TO_CLIENT",
+  "type": "SSE_EVENT",
+  "event_type": "data",
+  "data": "/messages/?session_id=4bff737b25f546a0a2f1248cf2e0faae"
+}
+2025-06-30 17:07:20,050 - INFO - CONNECTION: {
+  "timestamp": "2025-06-30T17:07:20.050831",
+  "session_id": "7097de4f",
+  "type": "CONNECTION_STATUS",
+  "status": "ESTABLISHED",
+  "details": "Client: 127.0.0.1 -> Proxy: 8000"
+}
+2025-06-30 17:07:20,050 - INFO - REQUEST: {
+  "timestamp": "2025-06-30T17:07:20.050883",
+  "session_id": "7097de4f",
+  "direction": "CLIENT_TO_PROXY",
+  "type": "REQUEST",
+  "method": "POST",
+  "url": "http://127.0.0.1:8000/messages/?session_id=4bff737b25f546a0a2f1248cf2e0faae",
+  "headers": {
+    "Host": "127.0.0.1:8000",
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, zstd",
+    "Connection": "keep-alive",
+    "User-Agent": "python-httpx/0.28.1",
+    "Content-Length": "152",
+    "Content-Type": "application/json"
+  },
+  "body": "{\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2025-03-26\",\"capabilities\":{},\"clientInfo\":{\"name\":\"mcp\",\"version\":\"0.1.0\"}},\"jsonrpc\":\"2.0\",\"id\":0}"
+}
+2025-06-30 17:07:20,052 - INFO - RESPONSE: {
+  "timestamp": "2025-06-30T17:07:20.052623",
+  "session_id": "7097de4f",
+  "direction": "SERVER_TO_PROXY",
+  "type": "RESPONSE",
+  "status": 202,
+  "headers": {
+    "Date": "Mon, 30 Jun 2025 09:07:20 GMT",
+    "Server": "uvicorn",
+    "Content-Length": "8"
+  },
+  "body": "Accepted"
+}
+2025-06-30 17:07:20,052 - INFO - CONNECTION: {
+  "timestamp": "2025-06-30T17:07:20.052894",
+  "session_id": "7097de4f",
+  "type": "CONNECTION_STATUS",
+  "status": "CLOSED",
+  "details": ""
+}
+2025-06-30 17:07:20,053 - INFO - 127.0.0.1 [30/Jun/2025:17:07:20 +0800] "POST /messages/?session_id=4bff737b25f546a0a2f1248cf2e0faae HTTP/1.1" 202 161 "-" "python-httpx/0.28.1"
+2025-06-30 17:07:20,053 - INFO - SSE_EVENT: {
+  "timestamp": "2025-06-30T17:07:20.053104",
+  "session_id": "ef15794d",
+  "direction": "SERVER_TO_CLIENT",
+  "type": "SSE_EVENT",
+  "event_type": "event",
+  "data": "message"
+}
+2025-06-30 17:07:20,053 - INFO - SSE_EVENT: {
+  "timestamp": "2025-06-30T17:07:20.053152",
+  "session_id": "ef15794d",
+  "direction": "SERVER_TO_CLIENT",
+  "type": "SSE_EVENT",
+  "event_type": "data",
+  "data": "{\"jsonrpc\":\"2.0\",\"id\":0,\"result\":{\"protocolVersion\":\"2025-03-26\",\"capabilities\":{\"experimental\":{},\"prompts\":{\"listChanged\":false},\"resources\":{\"subscribe\":false,\"listChanged\":false},\"tools\":{\"listChanged\":false}},\"serverInfo\":{\"name\":\"Simple Weather Server\",\"version\":\"1.9.4\"}}}"
+}
+2025-06-30 17:07:20,054 - INFO - CONNECTION: {
+  "timestamp": "2025-06-30T17:07:20.054326",
+  "session_id": "5f7b86c1",
+  "type": "CONNECTION_STATUS",
+  "status": "ESTABLISHED",
+  "details": "Client: 127.0.0.1 -> Proxy: 8000"
+}
+2025-06-30 17:07:20,054 - INFO - REQUEST: {
+  "timestamp": "2025-06-30T17:07:20.054369",
+  "session_id": "5f7b86c1",
+  "direction": "CLIENT_TO_PROXY",
+  "type": "REQUEST",
+  "method": "POST",
+  "url": "http://127.0.0.1:8000/messages/?session_id=4bff737b25f546a0a2f1248cf2e0faae",
+  "headers": {
+    "Host": "127.0.0.1:8000",
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, zstd",
+    "Connection": "keep-alive",
+    "User-Agent": "python-httpx/0.28.1",
+    "Content-Length": "54",
+    "Content-Type": "application/json"
+  },
+  "body": "{\"method\":\"notifications/initialized\",\"jsonrpc\":\"2.0\"}"
+}
+2025-06-30 17:07:20,056 - INFO - RESPONSE: {
+  "timestamp": "2025-06-30T17:07:20.056029",
+  "session_id": "5f7b86c1",
+  "direction": "SERVER_TO_PROXY",
+  "type": "RESPONSE",
+  "status": 202,
+  "headers": {
+    "Date": "Mon, 30 Jun 2025 09:07:20 GMT",
+    "Server": "uvicorn",
+    "Content-Length": "8"
+  },
+  "body": "Accepted"
+}
+2025-06-30 17:07:20,056 - INFO - CONNECTION: {
+  "timestamp": "2025-06-30T17:07:20.056211",
+  "session_id": "5f7b86c1",
+  "type": "CONNECTION_STATUS",
+  "status": "CLOSED",
+  "details": ""
+}
+2025-06-30 17:07:20,056 - INFO - 127.0.0.1 [30/Jun/2025:17:07:20 +0800] "POST /messages/?session_id=4bff737b25f546a0a2f1248cf2e0faae HTTP/1.1" 202 161 "-" "python-httpx/0.28.1"
+2025-06-30 17:07:20,057 - INFO - CONNECTION: {
+  "timestamp": "2025-06-30T17:07:20.057034",
+  "session_id": "d3a88f9b",
+  "type": "CONNECTION_STATUS",
+  "status": "ESTABLISHED",
+  "details": "Client: 127.0.0.1 -> Proxy: 8000"
+}
+2025-06-30 17:07:20,057 - INFO - REQUEST: {
+  "timestamp": "2025-06-30T17:07:20.057072",
+  "session_id": "d3a88f9b",
+  "direction": "CLIENT_TO_PROXY",
+  "type": "REQUEST",
+  "method": "POST",
+  "url": "http://127.0.0.1:8000/messages/?session_id=4bff737b25f546a0a2f1248cf2e0faae",
+  "headers": {
+    "Host": "127.0.0.1:8000",
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, zstd",
+    "Connection": "keep-alive",
+    "User-Agent": "python-httpx/0.28.1",
+    "Content-Length": "46",
+    "Content-Type": "application/json"
+  },
+  "body": "{\"method\":\"tools/list\",\"jsonrpc\":\"2.0\",\"id\":1}"
+}
+2025-06-30 17:07:20,058 - INFO - RESPONSE: {
+  "timestamp": "2025-06-30T17:07:20.058583",
+  "session_id": "d3a88f9b",
+  "direction": "SERVER_TO_PROXY",
+  "type": "RESPONSE",
+  "status": 202,
+  "headers": {
+    "Date": "Mon, 30 Jun 2025 09:07:20 GMT",
+    "Server": "uvicorn",
+    "Content-Length": "8"
+  },
+  "body": "Accepted"
+}
+2025-06-30 17:07:20,058 - INFO - CONNECTION: {
+  "timestamp": "2025-06-30T17:07:20.058798",
+  "session_id": "d3a88f9b",
+  "type": "CONNECTION_STATUS",
+  "status": "CLOSED",
+  "details": ""
+}
+2025-06-30 17:07:20,058 - INFO - 127.0.0.1 [30/Jun/2025:17:07:20 +0800] "POST /messages/?session_id=4bff737b25f546a0a2f1248cf2e0faae HTTP/1.1" 202 161 "-" "python-httpx/0.28.1"
+2025-06-30 17:07:20,059 - INFO - SSE_EVENT: {
+  "timestamp": "2025-06-30T17:07:20.059138",
+  "session_id": "ef15794d",
+  "direction": "SERVER_TO_CLIENT",
+  "type": "SSE_EVENT",
+  "event_type": "event",
+  "data": "message"
+}
+2025-06-30 17:07:20,059 - INFO - SSE_EVENT: {
+  "timestamp": "2025-06-30T17:07:20.059204",
+  "session_id": "ef15794d",
+  "direction": "SERVER_TO_CLIENT",
+  "type": "SSE_EVENT",
+  "event_type": "data",
+  "data": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"tools\":[{\"name\":\"get_coordinates\",\"description\":\"根据城市名称获取其地理坐标（经纬度）。\\n\\n:param city: 城市名称，例如 \\\"北京\\\"。\\n:return: 包含城市名称、纬度和经度的字典。\",\"inputSchema\":{\"properties\":{\"city\":{\"title\":\"City\",\"type\":\"string\"}},\"required\":[\"city\"],\"type\":\"object\"}},{\"name\":\"get_weather\",\"description\":\"根据经纬度坐标获取天气信息。\\n\\n:param latitude: 纬度。\\n:param longitude: 经度。\\n:return: 包含天气详情的字典。\",\"inputSchema\":{\"properties\":{\"latitude\":{\"title\":\"Latitude\",\"type\":\"number\"},\"longitude\":{\"title\":\"Longitude\",\"type\":\"number\"}},\"required\":[\"latitude\",\"longitude\"],\"type\":\"object\"}}]}}"
+}
+2025-06-30 17:07:20,060 - INFO - CONNECTION: {
+  "timestamp": "2025-06-30T17:07:20.060170",
+  "session_id": "75cbb691",
+  "type": "CONNECTION_STATUS",
+  "status": "ESTABLISHED",
+  "details": "Client: 127.0.0.1 -> Proxy: 8000"
+}
+2025-06-30 17:07:20,060 - INFO - REQUEST: {
+  "timestamp": "2025-06-30T17:07:20.060230",
+  "session_id": "75cbb691",
+  "direction": "CLIENT_TO_PROXY",
+  "type": "REQUEST",
+  "method": "POST",
+  "url": "http://127.0.0.1:8000/messages/?session_id=4bff737b25f546a0a2f1248cf2e0faae",
+  "headers": {
+    "Host": "127.0.0.1:8000",
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, zstd",
+    "Connection": "keep-alive",
+    "User-Agent": "python-httpx/0.28.1",
+    "Content-Length": "113",
+    "Content-Type": "application/json"
+  },
+  "body": "{\"method\":\"tools/call\",\"params\":{\"name\":\"get_coordinates\",\"arguments\":{\"city\":\"beijing\"}},\"jsonrpc\":\"2.0\",\"id\":2}"
+}
+2025-06-30 17:07:20,061 - INFO - RESPONSE: {
+  "timestamp": "2025-06-30T17:07:20.061806",
+  "session_id": "75cbb691",
+  "direction": "SERVER_TO_PROXY",
+  "type": "RESPONSE",
+  "status": 202,
+  "headers": {
+    "Date": "Mon, 30 Jun 2025 09:07:20 GMT",
+    "Server": "uvicorn",
+    "Content-Length": "8"
+  },
+  "body": "Accepted"
+}
+2025-06-30 17:07:20,061 - INFO - CONNECTION: {
+  "timestamp": "2025-06-30T17:07:20.061954",
+  "session_id": "75cbb691",
+  "type": "CONNECTION_STATUS",
+  "status": "CLOSED",
+  "details": ""
+}
+2025-06-30 17:07:20,062 - INFO - 127.0.0.1 [30/Jun/2025:17:07:20 +0800] "POST /messages/?session_id=4bff737b25f546a0a2f1248cf2e0faae HTTP/1.1" 202 161 "-" "python-httpx/0.28.1"
+2025-06-30 17:07:20,062 - INFO - SSE_EVENT: {
+  "timestamp": "2025-06-30T17:07:20.062268",
+  "session_id": "ef15794d",
+  "direction": "SERVER_TO_CLIENT",
+  "type": "SSE_EVENT",
+  "event_type": "event",
+  "data": "message"
+}
+2025-06-30 17:07:20,062 - INFO - SSE_EVENT: {
+  "timestamp": "2025-06-30T17:07:20.062307",
+  "session_id": "ef15794d",
+  "direction": "SERVER_TO_CLIENT",
+  "type": "SSE_EVENT",
+  "event_type": "data",
+  "data": "{\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"{\\n  \\\"city\\\": \\\"beijing\\\",\\n  \\\"latitude\\\": 39.9042,\\n  \\\"longitude\\\": 116.4074\\n}\"}],\"isError\":false}}"
+}
+2025-06-30 17:07:35,050 - INFO - SSE_EVENT: {
+  "timestamp": "2025-06-30T17:07:35.050720",
+  "session_id": "ef15794d",
+  "direction": "SERVER_TO_CLIENT",
+  "type": "SSE_EVENT",
+  "event_type": "raw",
+  "data": ": ping - 2025-06-30 09:07:35.050053+00:00"
+}
+2025-06-30 17:07:35,051 - ERROR - ERROR: {
+  "timestamp": "2025-06-30T17:07:35.051048",
+  "session_id": "ef15794d",
+  "type": "ERROR",
+  "error": "SSE数据处理失败: Cannot write to closing transport",
+  "details": {}
+}
+2025-06-30 17:07:35,051 - INFO - CONNECTION: {
+  "timestamp": "2025-06-30T17:07:35.051397",
+  "session_id": "ef15794d",
+  "type": "CONNECTION_STATUS",
+  "status": "SSE_ENDED",
+  "details": ""
+}
+2025-06-30 17:07:35,051 - INFO - CONNECTION: {
+  "timestamp": "2025-06-30T17:07:35.051500",
+  "session_id": "ef15794d",
+  "type": "CONNECTION_STATUS",
+  "status": "CLOSED",
+  "details": ""
+}
+2025-06-30 17:07:35,051 - INFO - 127.0.0.1 [30/Jun/2025:17:07:20 +0800] "GET /sse/ HTTP/1.1" 200 0 "-" "python-httpx/0.28.1"
