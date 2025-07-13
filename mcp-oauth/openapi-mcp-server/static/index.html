@@ -12,41 +12,65 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f5f5f5;
+            background-color: #f0f2f5;
+            margin: 0;
         }
         .container {
             text-align: center;
             background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            padding: 20px 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
         }
         .button {
-            padding: 10px 20px;
+            padding: 14px 22px;
             font-size: 16px;
             color: #fff;
             background-color: #007BFF;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.2s ease-in-out;
         }
         .button:hover {
             background-color: #0056b3;
         }
-        #tools {
+        .status {
+            color: #333;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .tools-list {
             margin-top: 20px;
             text-align: left;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 <div class="container">
     <h1>Start MCP Authorization</h1>
-    <input type="text" id="mcp-url" placeholder="Enter MCP URL" style="width: 80%; padding: 10px; margin-bottom: 20px;">
-    <button class="button" onclick="startAuth()">Authorize</button>
-    <p id="status"></p>
-    <div id="tools"></div>
+        <div class="form-group">
+            <input type="text" id="mcp-url" placeholder="Enter MCP URL" class="input"/>
+        </div>
+        <div class="form-group">
+            <button class="button" onclick="startAuth()">Authorize</button>
+        </div>
+        <div id="status" class="status"></div>
+        <div id="tools" class="tools-list"></div>
 </div>
 <script>
     async function startAuth() {
@@ -70,7 +94,7 @@
             
             const data = await response.json();
             if (data.auth_url) {
-                window.location.href = data.auth_url;
+                window.open(data.auth_url, '_blank');
             } else {
                 document.getElementById('status').innerText = 'Error in fetching auth URL.';
             }
